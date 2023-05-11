@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website</title>
+
+    <link rel="stylesheet" href="assests/bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assests/bootstrap-5.1.3-dist/css/bootstrap-grid.min.css">
+
+    <style>
+
+
+        section{
+            position: relative;
+            width: 50vw;
+
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #sectionItems{
+            display: none;
+        }
+
+        #sectionOrders{
+            display: none;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">POS System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+                <button id="btnCustomer" class="btn">Customer</button>
+                <button id="btnItems" class="btn">Items</button>
+                <button id="btnOrders" class="btn">Orders</button>
+
+
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!--////////////////////////////////////  Customer Form     ////////////////////////////////////-->
+
+<section id="sectionCustomer">
+    <h3 style="padding-top: 20px">Customer</h3><br>
+    <table class="table table-bordered" style="margin-bottom:40px">
+        <thead>
+        <tr bgcolor="orange">
+            <th scope="col">Customer Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">tp</th>
+            <th scope="col">Salary</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">C001</th>
+            <td>1200</td>
+            <td>12</td>
+            <td>3432</td>
+        </tr>
+        <tr>
+            <th scope="row">C002</th>
+            <td>233</td>
+            <td>43</td>
+            <td>111</td>
+        </tr>
+        <tr>
+            <th scope="row">C003</th>
+            <td>1212</td>
+            <td>4</td>
+            <td>433</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <form class="row g-3" style="background-color: #86b7fe; padding-bottom: 10px">
+        <h3 style="background-color: #0b5ed7">New Customer</h3>
+
+        <div class="col-md-6">
+            <label for="customerId" class="form-label">Customer ID:</label>
+            <input type="text" class="form-control" id="customerId">
+        </div>
+        <div class="col-md-6">
+            <label for="customerName" class="form-label">Customer Name:</label>
+            <input type="text" class="form-control" id="customerName">
+        </div>
+        <div class="col-md-6">
+            <label for="customerAddress" class="form-label">Customer Address:</label>
+            <input type="text" class="form-control" id="customerAddress">
+        </div>
+        <div class="col-md-6">
+            <label for="customerSalary" class="form-label">Customer Salary:</label>
+            <input type="text" class="form-control" id="customerSalary">
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" style="background-color: forestgreen">Save</button>
+            <button type="submit" class="btn btn-primary" style="background-color: red">Delete</button>
+            <button type="submit" class="btn btn-primary" style="background-color: yellow">Update</button>
+            <button type="submit" class="btn btn-primary" style="background-color: cadetblue">Search</button>
+        </div>
+
+    </form>
+
+</section>
+
+<!--////////////////////////////////////  Items Form     ////////////////////////////////////-->
+
+<section id="sectionItems">
+    <h3 style="padding-top: 20px">Items</h3><br>
+    <table class="table table-bordered" style="margin-bottom:40px">
+        <thead>
+        <tr bgcolor="orange">
+            <th scope="col">Item Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">P001</th>
+            <td>1200</td>
+            <td>12</td>
+            <td>3432</td>
+        </tr>
+        <tr>
+            <th scope="row">P002</th>
+            <td>233</td>
+            <td>43</td>
+            <td>111</td>
+        </tr>
+        <tr>
+            <th scope="row">P003</th>
+            <td>1212</td>
+            <td>4</td>
+            <td>433</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <form class="row g-3" style="background-color: #86b7fe; padding-bottom: 10px">
+        <h3 style="background-color: #0b5ed7">New Item</h3>
+
+        <div class="col-md-6">
+            <label for="itemCode" class="form-label">Item Code:</label>
+            <input type="text" class="form-control" id="itemCode">
+        </div>
+        <div class="col-md-6">
+            <label for="itemName" class="form-label">Item Name:</label>
+            <input type="text" class="form-control" id="itemName">
+        </div>
+        <div class="col-md-6">
+            <label for="itemPrice" class="form-label">Item Price:</label>
+            <input type="text" class="form-control" id="itemPrice">
+        </div>
+        <div class="col-md-6">
+            <label for="itemQty" class="form-label">Item Quantity:</label>
+            <input type="text" class="form-control" id="itemQty">
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" style="background-color: forestgreen">Save</button>
+            <button type="submit" class="btn btn-primary" style="background-color: red">Delete</button>
+            <button type="submit" class="btn btn-primary" style="background-color: yellow">Update</button>
+            <button type="submit" class="btn btn-primary" style="background-color: cadetblue">Search</button>
+        </div>
+
+    </form>
+
+</section>
+
+<!--////////////////////////////////////  Orders Form     ////////////////////////////////////-->
+
+<section id="sectionOrders">
+
+    <section>
+        <h3 style="padding-top: 20px">Place Order</h3><br>
+
+        <form class="row g-3" style="background-color: #86b7fe; padding-bottom: 10px" >
+
+            <h3 style="background-color: #0b5ed7">Invoice Details</h3>
+
+            <div class="col-md-6">
+                <label for="orderId" class="form-label">Order ID:</label>
+                <input type="text" class="form-control" id="orderId" value="D001">
+            </div>
+            <div class="col-md-6">
+                <label for="date" class="form-label">Date:</label>
+                <input type="date" class="form-control" id="date" value="07/06/2023" >
+            </div>
+            <div class="col-md-6">
+                <label for="customer" class="form-label">Customer:</label>
+                <input type="text" class="form-control" id="customer" value="C001">
+            </div>
+            <div class="col-md-6">
+                <label for="customer-Id" class="form-label">Customer ID:</label>
+                <input type="text" class="form-control" id="customer-Id" value="C001">
+            </div>
+            <div class="col-md-6">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" value="Niroth">
+            </div>
+            <div class="col-md-6">
+                <label for="salary" class="form-label">Salary:</label>
+                <input type="text" class="form-control" id="salary" value="1200">
+            </div>
+            <div class="col-12">
+                <label for="address" class="form-label">Address:</label>
+                <input type="text" class="form-control" id="address" placeholder="Panadura">
+            </div>
+
+
+        </form>
+
+    </section>
+
+    <section>
+
+        <form class="row g-3" style="background-color: #86b7fe; padding-bottom: 10px">
+            <h3 style="background-color: #0b5ed7">Item Select</h3>
+
+            <div class="col-md-6">
+                <label for="item" class="form-label">Item:</label>
+                <input type="text" class="form-control" id="item" value="P001">
+            </div>
+            <div class="col-md-6">
+                <label for="item-Code" class="form-label">Item Code:</label>
+                <input type="text" class="form-control" id="item-Code" value="P002" >
+            </div>
+            <div class="col-md-6">
+                <label for="item-Name" class="form-label">Item Name:</label>
+                <input type="text" class="form-control" id="item-Name" value="Banana">
+            </div>
+            <div class="col-md-6">
+                <label for="price" class="form-label">Price:</label>
+                <input type="text" class="form-control" id="price" value="1299">
+            </div>
+            <div class="col-md-6">
+                <label for="qty" class="form-label">Qty:</label>
+                <input type="text" class="form-control" id="qty" value="12">
+            </div>
+            <div class="col-12">
+                <label for="orderQty" class="form-label">Order Qty:</label>
+                <input type="text" class="form-control" id="orderQty" placeholder="12">
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary" style="background-color: red">Add Item</button>
+            </div>
+
+        </form>
+    </section>
+
+    <section>
+
+        <form class="row g-3" style="background-color: #86b7fe; padding-bottom: 10px" >
+            <h3 style="color: #20c997">Total : 1000Rs/=</h3>
+            <h3 style="color: red">SubTotal : 2000Rs/=</h3>
+
+            <div class="col-md-6">
+                <label for="cash" class="form-label">Cash:</label>
+                <input type="text" class="form-control" id="cash" value="3000">
+            </div>
+            <div class="col-md-6">
+                <label for="discount" class="form-label">Discount:</label>
+                <input type="text" class="form-control" id="discount" value="10" >
+            </div>
+            <div class="col-12">
+                <label for="balance" class="form-label">Balance:</label>
+                <input type="text" class="form-control" id="balance" placeholder="12">
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary" style="background-color: forestgreen">Purchase</button>
+            </div>
+
+        </form>
+    </section>
+
+    <section>
+        <table class="table table-bordered">
+            <thead>
+            <tr bgcolor="orange">
+                <th scope="col">Item Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">P001</th>
+                <td>1200</td>
+                <td>12</td>
+                <td>3432</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </section>
+
+</section>
+
+<script src="assests/lib/jQuery/jquery-3.6.4.min.js"></script>
+
+<script>
+
+    document.getElementById('btnCustomer').addEventListener("click", function () {
+        $('#sectionItems').css("display", "none");
+        $('#sectionOrders').css("display", "none");
+
+        $('#sectionCustomer').css("display", "block");
+
+    })
+
+    document.getElementById('btnItems').addEventListener("click", function () {
+        $('#sectionCustomer').css("display", "none");
+        $('#sectionOrders').css("display", "none");
+
+        $('#sectionItems').css("display", "block");
+
+    })
+
+    document.getElementById('btnOrders').addEventListener("click", function () {
+        $('#sectionCustomer').css("display", "none");
+        $('#sectionItems').css("display", "none");
+
+        $('#sectionOrders').css("display", "block");
+
+    })
+
+
+</script>
+
+</body>
+</html>
