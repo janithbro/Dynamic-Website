@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <title>Website</title>
 
-    <link rel="stylesheet" href="assests/bootstrap-5.1.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assests/bootstrap-5.1.3-dist/css/bootstrap-grid.min.css">
+<!--    <link rel="stylesheet" href="assests/bootstrap-5.1.3-dist/css/bootstrap.min.css">-->
+<!--    <link rel="stylesheet" href="assests/bootstrap-5.1.3-dist/css/bootstrap-grid.min.css">-->
+
+    <link rel="stylesheet" href="assests/lib/bootstrap/css/bootstrap.min.css">
+
 
     <style>
 
@@ -28,6 +31,8 @@
         }
 
     </style>
+
+
 
 </head>
 <body>
@@ -60,65 +65,49 @@
 
 <section id="sectionCustomer">
     <h3 style="padding-top: 20px">Customer</h3><br>
-    <table class="table table-bordered" style="margin-bottom:40px">
-        <thead>
-        <tr bgcolor="orange">
-            <th scope="col">Customer Name</th>
-            <th scope="col">Age</th>
-            <th scope="col">tp</th>
-            <th scope="col">Salary</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">C001</th>
-            <td>1200</td>
-            <td>12</td>
-            <td>3432</td>
-        </tr>
-        <tr>
-            <th scope="row">C002</th>
-            <td>233</td>
-            <td>43</td>
-            <td>111</td>
-        </tr>
-        <tr>
-            <th scope="row">C003</th>
-            <td>1212</td>
-            <td>4</td>
-            <td>433</td>
-        </tr>
-        </tbody>
-    </table>
 
     <form class="row g-3" style="background-color: #86b7fe; padding-bottom: 10px">
         <h3 style="background-color: #0b5ed7">New Customer</h3>
 
         <div class="col-md-6">
-            <label for="customerId" class="form-label">Customer ID:</label>
-            <input type="text" class="form-control" id="customerId">
+            <label for="customer_id" class="form-label">Customer ID:</label>
+            <input type="text" class="form-control" id="customer_id">
         </div>
         <div class="col-md-6">
-            <label for="customerName" class="form-label">Customer Name:</label>
-            <input type="text" class="form-control" id="customerName">
+            <label for="first_name" class="form-label">Customer First Name:</label>
+            <input type="text" class="form-control" id="first_name">
         </div>
         <div class="col-md-6">
-            <label for="customerAddress" class="form-label">Customer Address:</label>
-            <input type="text" class="form-control" id="customerAddress">
+            <label for="last_name" class="form-label">Customer Last Name:</label>
+            <input type="text" class="form-control" id="last_name">
         </div>
         <div class="col-md-6">
-            <label for="customerSalary" class="form-label">Customer Salary:</label>
-            <input type="text" class="form-control" id="customerSalary">
+            <label for="customer_address" class="form-label">Customer Address:</label>
+            <input type="text" class="form-control" id="customer_address">
         </div>
 
         <div class="col-12">
-            <button type="submit" class="btn btn-primary" style="background-color: forestgreen">Save</button>
-            <button type="submit" class="btn btn-primary" style="background-color: red">Delete</button>
-            <button type="submit" class="btn btn-primary" style="background-color: yellow">Update</button>
-            <button type="submit" class="btn btn-primary" style="background-color: cadetblue">Search</button>
+            <button id="btn_add" type="submit" class="btn btn-primary" style="background-color: forestgreen">Save</button>
+            <button id="btn_delete" type="submit" class="btn btn-primary" style="background-color: red">Delete</button>
+            <button id="btn_update" type="submit" class="btn btn-primary" style="background-color: yellow">Update</button>
         </div>
 
     </form>
+    <br>
+
+    <table class="table table-bordered" style="margin-bottom:40px">
+        <thead>
+        <tr bgcolor="orange">
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Address</th>
+        </tr>
+        </thead>
+        <tbody id="c_body">
+
+        </tbody>
+    </table>
 
 </section>
 
@@ -126,6 +115,36 @@
 
 <section id="sectionItems">
     <h3 style="padding-top: 20px">Items</h3><br>
+
+
+    <form class="row g-3" style="background-color: #86b7fe; padding-bottom: 10px">
+        <h3 style="background-color: #0b5ed7">New Item</h3>
+
+        <div class="col-md-6">
+            <label for="item_code" class="form-label">Item Code:</label>
+            <input type="text" class="form-control" id="item_code">
+        </div>
+        <div class="col-md-6">
+            <label for="item_name" class="form-label">Item Name:</label>
+            <input type="text" class="form-control" id="item_name">
+        </div>
+        <div class="col-md-6">
+            <label for="item_price" class="form-label">Item Price:</label>
+            <input type="text" class="form-control" id="item_price">
+        </div>
+        <div class="col-md-6">
+            <label for="item_qty" class="form-label">Item Quantity:</label>
+            <input type="text" class="form-control" id="item_qty">
+        </div>
+
+        <div class="col-12">
+            <button id="btn_item" type="submit" class="btn btn-primary" style="background-color: forestgreen">Save</button>
+            <button id="btn_delete_item" type="submit" class="btn btn-primary" style="background-color: red">Delete</button>
+            <button id="btn_update_item" type="submit" class="btn btn-primary" style="background-color: yellow">Update</button>
+        </div>
+
+    </form>
+
     <table class="table table-bordered" style="margin-bottom:40px">
         <thead>
         <tr bgcolor="orange">
@@ -135,56 +154,10 @@
             <th scope="col">Price</th>
         </tr>
         </thead>
-        <tbody>
-        <tr>
-            <th scope="row">P001</th>
-            <td>1200</td>
-            <td>12</td>
-            <td>3432</td>
-        </tr>
-        <tr>
-            <th scope="row">P002</th>
-            <td>233</td>
-            <td>43</td>
-            <td>111</td>
-        </tr>
-        <tr>
-            <th scope="row">P003</th>
-            <td>1212</td>
-            <td>4</td>
-            <td>433</td>
-        </tr>
+        <tbody id="i_body">
+
         </tbody>
     </table>
-
-    <form class="row g-3" style="background-color: #86b7fe; padding-bottom: 10px">
-        <h3 style="background-color: #0b5ed7">New Item</h3>
-
-        <div class="col-md-6">
-            <label for="itemCode" class="form-label">Item Code:</label>
-            <input type="text" class="form-control" id="itemCode">
-        </div>
-        <div class="col-md-6">
-            <label for="itemName" class="form-label">Item Name:</label>
-            <input type="text" class="form-control" id="itemName">
-        </div>
-        <div class="col-md-6">
-            <label for="itemPrice" class="form-label">Item Price:</label>
-            <input type="text" class="form-control" id="itemPrice">
-        </div>
-        <div class="col-md-6">
-            <label for="itemQty" class="form-label">Item Quantity:</label>
-            <input type="text" class="form-control" id="itemQty">
-        </div>
-
-        <div class="col-12">
-            <button type="submit" class="btn btn-primary" style="background-color: forestgreen">Save</button>
-            <button type="submit" class="btn btn-primary" style="background-color: red">Delete</button>
-            <button type="submit" class="btn btn-primary" style="background-color: yellow">Update</button>
-            <button type="submit" class="btn btn-primary" style="background-color: cadetblue">Search</button>
-        </div>
-
-    </form>
 
 </section>
 
@@ -348,6 +321,17 @@
 
 
 </script>
+
+
+<script src="assests/lib/jQuery/jquery-3.6.4.min.js"></script>
+
+<script type="module" src="../Dynamic-Website/controller/CustomerController.js"></script>
+<script type="module" src="../Dynamic-Website/controller/ItemController.js"></script>
+<script type="module" src="../Dynamic-Website/DB/db.js"></script>
+<script type="module" src="../Dynamic-Website/model/Customer.js"></script>
+<script type="module" src="../Dynamic-Website/model/Item.js"></script>
+
+
 
 </body>
 </html>
